@@ -3,7 +3,6 @@ package net.mcft.betterstorage.client.gui;
 import java.util.ArrayList;
 
 import net.mcft.betterstorage.BetterStorage;
-import net.mcft.betterstorage.misc.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 
@@ -16,7 +15,7 @@ public class GuiBetterStorageConfig extends GuiConfig {
     private static ArrayList<IConfigElement> configElements;
 
     public GuiBetterStorageConfig(GuiScreen parentScreen) {
-        super(parentScreen, configElements, Constants.modId, true, false, BetterStorage.MODNAME);
+        super(parentScreen, configElements, BetterStorage.MODID, true, false, BetterStorage.MODNAME);
     }
 
     public static void initialize(Minecraft minecraftInstance) {

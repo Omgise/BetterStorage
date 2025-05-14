@@ -1,8 +1,8 @@
 package net.mcft.betterstorage.tile.crate;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.item.tile.ItemTileBetterStorage;
 import net.mcft.betterstorage.misc.ConnectedTexture;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.tile.TileContainerBetterStorage;
 import net.mcft.betterstorage.utils.WorldUtils;
 import net.minecraft.block.material.Material;
@@ -44,7 +44,7 @@ public class TileCrate extends TileContainerBetterStorage implements ILaputaImmo
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
-        texture.registerIcons(iconRegister, Constants.modId + ":crate/%s");
+        texture.registerIcons(iconRegister, BetterStorage.MODID + ":crate/%s");
     }
 
     @Override

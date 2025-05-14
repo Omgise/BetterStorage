@@ -4,13 +4,13 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.api.crafting.BetterStorageCrafting;
 import net.mcft.betterstorage.api.crafting.IRecipeInput;
 import net.mcft.betterstorage.api.crafting.IStationRecipe;
 import net.mcft.betterstorage.api.crafting.RecipeBounds;
 import net.mcft.betterstorage.api.crafting.StationCrafting;
 import net.mcft.betterstorage.client.gui.GuiCraftingStation;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.misc.Resources;
 import net.mcft.betterstorage.utils.RenderUtils;
 import net.minecraft.client.Minecraft;
@@ -37,7 +37,7 @@ public class NEIRecipeHandler extends TemplateRecipeHandler {
 
     @Override
     public String getOverlayIdentifier() {
-        return Constants.modId + ".craftingStation";
+        return BetterStorage.MODID + ".craftingStation";
     }
 
     @Override

@@ -1,7 +1,6 @@
 package net.mcft.betterstorage.tile;
 
 import net.mcft.betterstorage.BetterStorage;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.utils.MiscUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -20,7 +19,7 @@ public class TileBetterStorage extends Block {
 
         setCreativeTab(BetterStorage.creativeTab);
 
-        setBlockName(Constants.modId + "." + getTileName());
+        setBlockName(BetterStorage.MODID + "." + getTileName());
         registerBlock();
 
     }
@@ -40,9 +39,10 @@ public class TileBetterStorage extends Block {
         Class<? extends Item> itemClass = getItemClass();
 
         if (itemClass != null) {
-            GameRegistry.registerBlock(this, (Class<? extends ItemBlock>) itemClass, getTileName(), Constants.modId);
+            GameRegistry
+                .registerBlock(this, (Class<? extends ItemBlock>) itemClass, getTileName(), BetterStorage.MODID);
         } else {
-            GameRegistry.registerBlock(this, null, getTileName(), Constants.modId);
+            GameRegistry.registerBlock(this, null, getTileName(), BetterStorage.MODID);
         }
     }
 

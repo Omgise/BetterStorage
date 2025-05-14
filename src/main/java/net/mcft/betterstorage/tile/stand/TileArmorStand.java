@@ -2,7 +2,7 @@ package net.mcft.betterstorage.tile.stand;
 
 import java.util.Random;
 
-import net.mcft.betterstorage.misc.Constants;
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.misc.SetBlockFlag;
 import net.mcft.betterstorage.proxy.ClientProxy;
 import net.mcft.betterstorage.tile.TileContainerBetterStorage;
@@ -46,7 +46,7 @@ public class TileArmorStand extends TileContainerBetterStorage {
     @Override
     @SideOnly(Side.CLIENT)
     public String getItemIconName() {
-        return Constants.modId + ":armorStand";
+        return BetterStorage.MODID + ":armorStand";
     }
 
     @Override

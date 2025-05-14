@@ -1,7 +1,6 @@
 package net.mcft.betterstorage.item.cardboard;
 
 import net.mcft.betterstorage.BetterStorage;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.utils.MiscUtils;
 import net.mcft.betterstorage.utils.StackUtils;
 import net.minecraft.block.Block;
@@ -24,7 +23,7 @@ public class ItemCardboardAxe extends ItemAxe implements ICardboardItem {
     public ItemCardboardAxe() {
         super(ItemCardboardSheet.toolMaterial);
         setCreativeTab(BetterStorage.creativeTab);
-        setUnlocalizedName(Constants.modId + "." + getItemName());
+        setUnlocalizedName(BetterStorage.MODID + "." + getItemName());
         GameRegistry.registerItem(this, getItemName());
     }
 
@@ -36,7 +35,7 @@ public class ItemCardboardAxe extends ItemAxe implements ICardboardItem {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon(Constants.modId + ":" + getItemName());
+        itemIcon = iconRegister.registerIcon(BetterStorage.MODID + ":" + getItemName());
     }
 
     @Override

@@ -1,6 +1,6 @@
 package net.mcft.betterstorage.item.tile;
 
-import net.mcft.betterstorage.misc.Constants;
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.tile.ContainerMaterial;
 import net.mcft.betterstorage.tile.TileLockable;
 import net.minecraft.block.Block;
@@ -29,7 +29,7 @@ public class ItemLockable extends ItemBlock {
         ContainerMaterial material = ContainerMaterial.getMaterial(stack, ContainerMaterial.iron);
 
         String name = StatCollector.translateToLocal(getUnlocalizedName(stack) + ".name.full");
-        String materialName = StatCollector.translateToLocal("material." + Constants.modId + "." + material.name);
+        String materialName = StatCollector.translateToLocal("material." + BetterStorage.MODID + "." + material.name);
         return name.replace("%MATERIAL%", materialName);
     }
 

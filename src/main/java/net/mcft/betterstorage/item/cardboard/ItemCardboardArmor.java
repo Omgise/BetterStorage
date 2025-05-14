@@ -1,7 +1,7 @@
 package net.mcft.betterstorage.item.cardboard;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.item.ItemArmorBetterStorage;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.misc.Resources;
 import net.mcft.betterstorage.utils.StackUtils;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -31,7 +31,7 @@ public class ItemCardboardArmor extends ItemArmorBetterStorage implements ICardb
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon(Constants.modId + ":" + getItemName());
+        itemIcon = iconRegister.registerIcon(BetterStorage.MODID + ":" + getItemName());
     }
 
     @Override

@@ -6,7 +6,6 @@ import java.util.List;
 import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.client.model.ModelDrinkingHelmet;
 import net.mcft.betterstorage.config.GlobalConfig;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.misc.EquipmentSlot;
 import net.mcft.betterstorage.misc.Resources;
 import net.mcft.betterstorage.misc.SmallPotionEffect;
@@ -52,8 +51,8 @@ public class ItemDrinkingHelmet extends ItemArmorBetterStorage {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon(Constants.modId + ":" + getItemName());
-        iconPotions = iconRegister.registerIcon(Constants.modId + ":" + getItemName() + "_potions");
+        itemIcon = iconRegister.registerIcon(BetterStorage.MODID + ":" + getItemName());
+        iconPotions = iconRegister.registerIcon(BetterStorage.MODID + ":" + getItemName() + "_potions");
     }
 
     @Override

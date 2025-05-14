@@ -2,8 +2,8 @@ package net.mcft.betterstorage.tile;
 
 import java.util.Random;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.item.tile.ItemCardboardBox;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.tile.entity.TileEntityCardboardBox;
 import net.mcft.betterstorage.utils.WorldUtils;
 import net.minecraft.block.material.Material;
@@ -37,8 +37,8 @@ public class TileCardboardBox extends TileContainerBetterStorage {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
-        blockIcon = iconRegister.registerIcon(Constants.modId + ":" + getTileName());
-        sideIcon = iconRegister.registerIcon(Constants.modId + ":" + getTileName() + "_side");
+        blockIcon = iconRegister.registerIcon(BetterStorage.MODID + ":" + getTileName());
+        sideIcon = iconRegister.registerIcon(BetterStorage.MODID + ":" + getTileName() + "_side");
     }
 
     @Override

@@ -1,7 +1,6 @@
 package net.mcft.betterstorage.item;
 
 import net.mcft.betterstorage.BetterStorage;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.utils.MiscUtils;
 import net.mcft.betterstorage.utils.StackUtils;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -25,7 +24,7 @@ public abstract class ItemBetterStorage extends Item {
         setMaxStackSize(1);
         setCreativeTab(BetterStorage.creativeTab);
 
-        setUnlocalizedName(Constants.modId + "." + getItemName());
+        setUnlocalizedName(BetterStorage.MODID + "." + getItemName());
         GameRegistry.registerItem(this, getItemName());
 
     }
@@ -38,7 +37,7 @@ public abstract class ItemBetterStorage extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon(Constants.modId + ":" + getItemName());
+        itemIcon = iconRegister.registerIcon(BetterStorage.MODID + ":" + getItemName());
     }
 
     // NBT helper functions

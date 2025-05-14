@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.content.BetterStorageItems;
 import net.mcft.betterstorage.content.BetterStorageTiles;
 import net.mcft.betterstorage.item.ItemDrinkingHelmet;
@@ -329,7 +330,7 @@ public class ChristmasEventHandler {
 
     public static class BetterChristmasProperties implements IExtendedEntityProperties {
 
-        public static final String identifier = Constants.modId + ".betterChristmas";
+        public static final String identifier = BetterStorage.MODID + ".betterChristmas";
 
         public int year = 2013;
         public boolean gotPresent = false;

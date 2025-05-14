@@ -1,11 +1,11 @@
 package net.mcft.betterstorage.item.locking;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.api.BetterStorageEnchantment;
 import net.mcft.betterstorage.api.lock.EnumLockInteraction;
 import net.mcft.betterstorage.api.lock.ILock;
 import net.mcft.betterstorage.api.lock.ILockable;
 import net.mcft.betterstorage.item.ItemBetterStorage;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.utils.RandomUtils;
 import net.mcft.betterstorage.utils.StackUtils;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -33,8 +33,8 @@ public class ItemLock extends ItemBetterStorage implements ILock {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
         super.registerIcons(iconRegister);
-        iconColor = iconRegister.registerIcon(Constants.modId + ":lock_color");
-        iconFullColor = iconRegister.registerIcon(Constants.modId + ":lock_fullColor");
+        iconColor = iconRegister.registerIcon(BetterStorage.MODID + ":lock_color");
+        iconFullColor = iconRegister.registerIcon(BetterStorage.MODID + ":lock_fullColor");
     }
 
     @Override

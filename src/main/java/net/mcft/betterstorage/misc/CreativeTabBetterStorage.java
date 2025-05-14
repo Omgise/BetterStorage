@@ -2,6 +2,7 @@ package net.mcft.betterstorage.misc;
 
 import java.util.List;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.api.BetterStorageEnchantment;
 import net.mcft.betterstorage.content.BetterStorageItems;
 import net.mcft.betterstorage.content.BetterStorageTiles;
@@ -15,7 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class CreativeTabBetterStorage extends CreativeTabs {
 
     public CreativeTabBetterStorage() {
-        super(Constants.modId);
+        super(BetterStorage.MODID);
     }
 
     @Override

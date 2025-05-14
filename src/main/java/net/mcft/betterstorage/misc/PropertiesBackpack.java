@@ -16,7 +16,7 @@ import net.minecraftforge.common.util.Constants.NBT;
 
 public class PropertiesBackpack implements IExtendedEntityProperties {
 
-    public static final String identifier = Constants.modId + ".backpack";
+    public static final String identifier = BetterStorage.MODID + ".backpack";
 
     public ItemStack backpack = null;
     public ItemStack[] contents = null;

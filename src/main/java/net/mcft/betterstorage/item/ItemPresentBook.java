@@ -2,8 +2,8 @@ package net.mcft.betterstorage.item;
 
 import java.util.List;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.misc.ChristmasEventHandler;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.utils.MiscUtils;
 import net.mcft.betterstorage.utils.NbtUtils;
 import net.mcft.betterstorage.utils.StackUtils;
@@ -29,8 +29,8 @@ public class ItemPresentBook extends ItemEditableBook {
         setCreativeTab(null);
 
         String name = MiscUtils.getName(this);
-        setUnlocalizedName(Constants.modId + "." + name);
-        setTextureName(Constants.modId + ":" + name);
+        setUnlocalizedName(BetterStorage.MODID + "." + name);
+        setTextureName(BetterStorage.MODID + ":" + name);
         GameRegistry.registerItem(this, name);
     }
 

@@ -11,7 +11,6 @@ import net.mcft.betterstorage.api.lock.IKey;
 import net.mcft.betterstorage.api.lock.ILock;
 import net.mcft.betterstorage.config.GlobalConfig;
 import net.mcft.betterstorage.content.BetterStorageItems;
-import net.mcft.betterstorage.misc.Constants;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.item.ItemStack;
@@ -131,7 +130,7 @@ public class EnchantmentBetterStorage extends Enchantment {
     public EnchantmentBetterStorage(String name, EnumEnchantmentType type, int id, int weight, int maxLevel,
         int minBase, int minScaling, int maxBase, int maxScaling) {
         super(id, weight, type);
-        setName(Constants.modId + "." + type.toString() + "." + name);
+        setName(BetterStorage.MODID + "." + type.toString() + "." + name);
         this.maxLevel = maxLevel;
         this.minBase = minBase;
         this.minScaling = minScaling;

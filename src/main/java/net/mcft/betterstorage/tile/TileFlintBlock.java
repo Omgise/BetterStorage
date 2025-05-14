@@ -1,6 +1,6 @@
 package net.mcft.betterstorage.tile;
 
-import net.mcft.betterstorage.misc.Constants;
+import net.mcft.betterstorage.BetterStorage;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
@@ -20,7 +20,7 @@ public class TileFlintBlock extends TileBetterStorage {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
-        blockIcon = iconRegister.registerIcon(Constants.modId + ":" + getTileName());
+        blockIcon = iconRegister.registerIcon(BetterStorage.MODID + ":" + getTileName());
     }
 
 }

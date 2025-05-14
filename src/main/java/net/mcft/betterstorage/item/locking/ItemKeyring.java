@@ -1,5 +1,6 @@
 package net.mcft.betterstorage.item.locking;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.api.IContainerItem;
 import net.mcft.betterstorage.api.lock.IKey;
 import net.mcft.betterstorage.container.ContainerKeyring;
@@ -25,7 +26,8 @@ public class ItemKeyring extends ItemBetterStorage implements IKey, IContainerIt
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        for (int i = 0; i < icons.length; i++) icons[i] = iconRegister.registerIcon(Constants.modId + ":keyring_" + i);
+        for (int i = 0; i < icons.length; i++)
+            icons[i] = iconRegister.registerIcon(BetterStorage.MODID + ":keyring_" + i);
         itemIcon = icons[0];
     }
 

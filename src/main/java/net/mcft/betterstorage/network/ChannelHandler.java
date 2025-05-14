@@ -2,7 +2,7 @@ package net.mcft.betterstorage.network;
 
 import java.util.List;
 
-import net.mcft.betterstorage.misc.Constants;
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.network.packet.PacketBackpackHasItems;
 import net.mcft.betterstorage.network.packet.PacketBackpackIsOpen;
 import net.mcft.betterstorage.network.packet.PacketBackpackOpen;
@@ -28,7 +28,7 @@ import cpw.mods.fml.relauncher.Side;
 public class ChannelHandler extends SimpleNetworkWrapper {
 
     public ChannelHandler() {
-        super(Constants.modId);
+        super(BetterStorage.MODID);
         register(0, Side.CLIENT, PacketOpenGui.class);
         register(1, Side.CLIENT, PacketBackpackTeleport.class);
         register(2, Side.CLIENT, PacketBackpackHasItems.class);

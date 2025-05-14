@@ -1,10 +1,10 @@
 package net.mcft.betterstorage.addon.nei;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.addon.Addon;
 import net.mcft.betterstorage.client.gui.GuiCraftingStation;
 import net.mcft.betterstorage.content.BetterStorageItems;
 import net.mcft.betterstorage.content.BetterStorageTiles;
-import net.mcft.betterstorage.misc.Constants;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
@@ -34,13 +34,13 @@ public class NEIAddon extends Addon {
         API.registerRecipeHandler(handler);
         API.registerUsageHandler(handler);
 
-        API.registerGuiOverlay(GuiCraftingStation.class, Constants.modId + ".craftingStation");
+        API.registerGuiOverlay(GuiCraftingStation.class, BetterStorage.MODID + ".craftingStation");
         API.registerGuiOverlay(GuiCraftingStation.class, "crafting", -8, 11);
 
         API.registerGuiOverlayHandler(
             GuiCraftingStation.class,
             new StationOverlayHandler(),
-            Constants.modId + ".craftingStation");
+            BetterStorage.MODID + ".craftingStation");
         API.registerGuiOverlayHandler(GuiCraftingStation.class, new StationOverlayHandler(-8, 11), "crafting");
 
         API.hideItem(new ItemStack(BetterStorageTiles.lockableDoor));

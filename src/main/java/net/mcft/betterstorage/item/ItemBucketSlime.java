@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.content.BetterStorageItems;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.misc.EquipmentSlot;
 import net.mcft.betterstorage.utils.LanguageUtils;
 import net.mcft.betterstorage.utils.StackUtils;
@@ -49,7 +49,7 @@ public class ItemBucketSlime extends ItemBetterStorage {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
-        empty = iconRegister.registerIcon(Constants.modId + ":bucketSlime_empty");
+        empty = iconRegister.registerIcon(BetterStorage.MODID + ":bucketSlime_empty");
         for (Handler handler : handlers.values()) handler.registerIcon(iconRegister);
     }
 
@@ -364,7 +364,7 @@ public class ItemBucketSlime extends ItemBetterStorage {
 
         /** Returns the icon location to be used in registerIcons. */
         public void registerIcon(IIconRegister iconRegister) {
-            icon = iconRegister.registerIcon(Constants.modId + ":bucketSlime_" + name);
+            icon = iconRegister.registerIcon(BetterStorage.MODID + ":bucketSlime_" + name);
         }
 
         /** Returns the size of the slime. */

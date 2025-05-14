@@ -36,7 +36,7 @@ public class BetterStorage {
     public static final String MODID = "betterstorage";
     public static final String MODNAME = "BetterStorage";
 
-    @Instance(Constants.modId)
+    @Instance(BetterStorage.MODID)
     public static BetterStorage instance;
 
     @SidedProxy(serverSide = Constants.commonProxy, clientSide = Constants.clientProxy)

@@ -2,7 +2,6 @@ package net.mcft.betterstorage.tile;
 
 import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.config.GlobalConfig;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.tile.entity.TileEntityCraftingStation;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -34,10 +33,10 @@ public class TileCraftingStation extends TileContainerBetterStorage {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
-        blockIcon = iconRegister.registerIcon(Constants.modId + ":" + getTileName());
-        topIcon = iconRegister.registerIcon(Constants.modId + ":" + getTileName() + "_top");
-        bottomIconDisabled = iconRegister.registerIcon(Constants.modId + ":" + getTileName() + "_bottom_0");
-        bottomIconEnabled = iconRegister.registerIcon(Constants.modId + ":" + getTileName() + "_bottom_1");
+        blockIcon = iconRegister.registerIcon(BetterStorage.MODID + ":" + getTileName());
+        topIcon = iconRegister.registerIcon(BetterStorage.MODID + ":" + getTileName() + "_top");
+        bottomIconDisabled = iconRegister.registerIcon(BetterStorage.MODID + ":" + getTileName() + "_bottom_0");
+        bottomIconEnabled = iconRegister.registerIcon(BetterStorage.MODID + ":" + getTileName() + "_bottom_1");
     }
 
     @Override

@@ -1,7 +1,6 @@
 package net.mcft.betterstorage.item;
 
 import net.mcft.betterstorage.BetterStorage;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.utils.MiscUtils;
 import net.minecraft.item.ItemArmor;
 
@@ -17,7 +16,7 @@ public abstract class ItemArmorBetterStorage extends ItemArmor {
 
         setCreativeTab(BetterStorage.creativeTab);
 
-        setUnlocalizedName(Constants.modId + "." + getItemName());
+        setUnlocalizedName(BetterStorage.MODID + "." + getItemName());
         GameRegistry.registerItem(this, getItemName());
     }
 

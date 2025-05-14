@@ -1,10 +1,10 @@
 package net.mcft.betterstorage.item.locking;
 
+import net.mcft.betterstorage.BetterStorage;
 import net.mcft.betterstorage.api.BetterStorageEnchantment;
 import net.mcft.betterstorage.api.lock.IKey;
 import net.mcft.betterstorage.api.lock.ILock;
 import net.mcft.betterstorage.item.ItemBetterStorage;
-import net.mcft.betterstorage.misc.Constants;
 import net.mcft.betterstorage.utils.RandomUtils;
 import net.mcft.betterstorage.utils.StackUtils;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -34,8 +34,8 @@ public class ItemKey extends ItemBetterStorage implements IKey {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister) {
         super.registerIcons(iconRegister);
-        iconColor = iconRegister.registerIcon(Constants.modId + ":key_color");
-        iconFullColor = iconRegister.registerIcon(Constants.modId + ":key_fullColor");
+        iconColor = iconRegister.registerIcon(BetterStorage.MODID + ":key_color");
+        iconFullColor = iconRegister.registerIcon(BetterStorage.MODID + ":key_fullColor");
     }
 
     @Override
