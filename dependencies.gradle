@@ -1,5 +1,6 @@
 dependencies {
     api("com.github.GTNewHorizons:CraftTweaker:3.3.1:dev")
+    api("com.github.GTNewHorizons:Baubles-Expanded:2.1.7-GTNH")
     api('com.github.GTNewHorizons:Botania:1.11.5-GTNH:dev') {
         exclude module: 'Baubles'
     }
