@@ -5,7 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public interface IAttachmentRenderer {
-	
-	public void render(Attachment attachment, float partialTicks);
-	
+
+    public void render(Attachment attachment, float partialTicks);
+
 }

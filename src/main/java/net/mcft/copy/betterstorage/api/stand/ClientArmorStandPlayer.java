@@ -12,19 +12,23 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class ClientArmorStandPlayer extends AbstractClientPlayer {
-	
-	public ClientArmorStandPlayer(World world) {
-		super(world, new GameProfile(null, "[ARMOR STAND]"));
-		setInvisible(true);
-	}
-	
-	@Override
-	public void addChatMessage(IChatComponent message) {  }
-	
-	@Override
-	public ChunkCoordinates getPlayerCoordinates() { return null; }
-	
-	@Override
-	public boolean canCommandSenderUseCommand(int permissionLevel, String commandName) { return false; }
-	
+
+    public ClientArmorStandPlayer(World world) {
+        super(world, new GameProfile(null, "[ARMOR STAND]"));
+        setInvisible(true);
+    }
+
+    @Override
+    public void addChatMessage(IChatComponent message) {}
+
+    @Override
+    public ChunkCoordinates getPlayerCoordinates() {
+        return null;
+    }
+
+    @Override
+    public boolean canCommandSenderUseCommand(int permissionLevel, String commandName) {
+        return false;
+    }
+
 }

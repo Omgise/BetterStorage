@@ -26,66 +26,66 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = BetterStorage.MODID,
-     name = BetterStorage.MODNAME,
-     dependencies = "required-after:Forge; after:Thaumcraft; after:NotEnoughItems;",
-     guiFactory = "net.mcft.copy.betterstorage.client.gui.BetterStorageGuiFactory")
+@Mod(
+    modid = BetterStorage.MODID,
+    name = BetterStorage.MODNAME,
+    dependencies = "required-after:Forge; after:Thaumcraft; after:NotEnoughItems;",
+    guiFactory = "net.mcft.copy.betterstorage.client.gui.BetterStorageGuiFactory")
 public class BetterStorage {
 
-	public static final String MODID = "betterstorage";
-	public static final String MODNAME = "BetterStorage";
-	
-	@Instance(Constants.modId)
-	public static BetterStorage instance;
-	
-	@SidedProxy(serverSide = Constants.commonProxy,
-	            clientSide = Constants.clientProxy)
-	public static CommonProxy proxy;
-	
-	public static ChannelHandler networkChannel;
-	
-	public static Logger log;
-	
-	public static CreativeTabs creativeTab;
-	
-	public static Config globalConfig;
-	
-	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
-		
-		networkChannel = new ChannelHandler();
-		log = event.getModLog();
-		creativeTab = new CreativeTabBetterStorage();
-		
-		Addon.initialize();
-		
-		globalConfig = new GlobalConfig(event.getSuggestedConfigurationFile());
-		Addon.setupConfigsAll();
-		globalConfig.load();
-		globalConfig.save();
-		
-		BetterStorageTiles.initialize();
-		BetterStorageItems.initialize();
-		
-		EnchantmentBetterStorage.initialize();
-		
-		BetterStorageTileEntities.register();
-		BetterStorageEntities.register();
-		DungeonLoot.add();
-		
-	}
-	
-	@EventHandler
-	public void load(FMLInitializationEvent event) {
-		
-		Recipes.add();
-		proxy.initialize();
-		
-	}
-	
-	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
-		Addon.postInitializeAll();
-	}
-	
+    public static final String MODID = "betterstorage";
+    public static final String MODNAME = "BetterStorage";
+
+    @Instance(Constants.modId)
+    public static BetterStorage instance;
+
+    @SidedProxy(serverSide = Constants.commonProxy, clientSide = Constants.clientProxy)
+    public static CommonProxy proxy;
+
+    public static ChannelHandler networkChannel;
+
+    public static Logger log;
+
+    public static CreativeTabs creativeTab;
+
+    public static Config globalConfig;
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+
+        networkChannel = new ChannelHandler();
+        log = event.getModLog();
+        creativeTab = new CreativeTabBetterStorage();
+
+        Addon.initialize();
+
+        globalConfig = new GlobalConfig(event.getSuggestedConfigurationFile());
+        Addon.setupConfigsAll();
+        globalConfig.load();
+        globalConfig.save();
+
+        BetterStorageTiles.initialize();
+        BetterStorageItems.initialize();
+
+        EnchantmentBetterStorage.initialize();
+
+        BetterStorageTileEntities.register();
+        BetterStorageEntities.register();
+        DungeonLoot.add();
+
+    }
+
+    @EventHandler
+    public void load(FMLInitializationEvent event) {
+
+        Recipes.add();
+        proxy.initialize();
+
+    }
+
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        Addon.postInitializeAll();
+    }
+
 }

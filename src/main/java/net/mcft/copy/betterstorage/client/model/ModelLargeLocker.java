@@ -4,8 +4,10 @@ import net.mcft.copy.betterstorage.misc.Resources;
 import net.minecraft.util.ResourceLocation;
 
 public class ModelLargeLocker extends ModelLocker {
-	
-	@Override
-	protected ResourceLocation modelPath() { return Resources.modelLockerLarge; }
-	
+
+    @Override
+    protected ResourceLocation modelPath() {
+        return Resources.modelLockerLarge;
+    }
+
 }

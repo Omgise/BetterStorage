@@ -11,23 +11,23 @@ import net.minecraft.network.PacketBuffer;
 
 /** Sent when the player presses the button to open eir backpack. */
 public class PacketBackpackOpen extends AbstractPacket<PacketBackpackOpen> {
-	
-	public PacketBackpackOpen() {  }
-	
-	@Override
-	public void encode(PacketBuffer buffer) throws IOException {
-		// No additional data.
-	}
-	
-	@Override
-	public void decode(PacketBuffer buffer) throws IOException {
-		// No additional data.
-	}
-	
-	@Override
-	public void handle(EntityPlayer player) {
-		if (BetterStorage.globalConfig.getBoolean(GlobalConfig.enableBackpackOpen))
-			ItemBackpack.openBackpack(player, player);
-	}
-	
+
+    public PacketBackpackOpen() {}
+
+    @Override
+    public void encode(PacketBuffer buffer) throws IOException {
+        // No additional data.
+    }
+
+    @Override
+    public void decode(PacketBuffer buffer) throws IOException {
+        // No additional data.
+    }
+
+    @Override
+    public void handle(EntityPlayer player) {
+        if (BetterStorage.globalConfig.getBoolean(GlobalConfig.enableBackpackOpen))
+            ItemBackpack.openBackpack(player, player);
+    }
+
 }
