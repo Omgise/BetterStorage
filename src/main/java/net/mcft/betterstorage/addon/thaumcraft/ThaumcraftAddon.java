@@ -222,8 +222,8 @@ public class ThaumcraftAddon extends Addon {
 
             List<ResearchPage> pages = new ArrayList<ResearchPage>();
             pages.add(new ResearchPage("tc.research_page.betterstorage.magicstorage.1"));
-            if (thaumcraftBackpack != null) pages.add(new ResearchPage(thaumcraftBackpackRecipe));
-            if (thaumiumChest != null) pages.add(new ResearchPage(thaumiumChestRecipe));
+            if (thaumcraftBackpack != null && thaumcraftBackpackRecipe != null) pages.add(new ResearchPage(thaumcraftBackpackRecipe));
+            if (thaumiumChest != null && thaumiumChestRecipe != null) pages.add(new ResearchPage(thaumiumChestRecipe));
 
             ResearchItem research = new ResearchItem(
                 "betterstorage.magicstorage",
