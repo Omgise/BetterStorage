@@ -4,8 +4,8 @@ import net.mcft.betterstorage.BetterStorage;
 
 public final class Constants {
 
-    public static final String commonProxy = "proxy.net.mcft.betterstorage.CommonProxy";
-    public static final String clientProxy = "proxy.net.mcft.betterstorage.ClientProxy";
+    public static final String commonProxy = "net.mcft.betterstorage.proxy.CommonProxy";
+    public static final String clientProxy = "net.mcft.betterstorage.proxy.ClientProxy";
 
     public static final String containerCrate = "container." + BetterStorage.MODID + ".crate";
     public static final String containerReinforcedChest = "container." + BetterStorage.MODID + ".reinforcedChest";
