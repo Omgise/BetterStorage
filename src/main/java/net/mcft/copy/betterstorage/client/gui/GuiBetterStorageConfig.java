@@ -15,7 +15,7 @@ public class GuiBetterStorageConfig extends GuiConfig {
 	private static ArrayList<IConfigElement> configElements;
 	
 	public GuiBetterStorageConfig(GuiScreen parentScreen) {
-		super(parentScreen, configElements, Constants.modId, true, false, Constants.modName);
+		super(parentScreen, configElements, Constants.modId, true, false, BetterStorage.MODNAME);
 	}
 
 	public static void initialize(Minecraft minecraftInstance) {

@@ -26,11 +26,14 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Constants.modId,
-     name = Constants.modName,
+@Mod(modid = BetterStorage.MODID,
+     name = BetterStorage.MODNAME,
      dependencies = "required-after:Forge; after:Thaumcraft; after:NotEnoughItems;",
      guiFactory = "net.mcft.copy.betterstorage.client.gui.BetterStorageGuiFactory")
 public class BetterStorage {
+
+	public static final String MODID = "betterstorage";
+	public static final String MODNAME = "BetterStorage";
 	
 	@Instance(Constants.modId)
 	public static BetterStorage instance;

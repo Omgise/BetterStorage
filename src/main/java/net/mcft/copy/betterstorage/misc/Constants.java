@@ -1,9 +1,10 @@
 package net.mcft.copy.betterstorage.misc;
 
+import net.mcft.copy.betterstorage.BetterStorage;
+
 public final class Constants {
 	
-	public static final String modId = "betterstorage";
-	public static final String modName = "BetterStorage";
+	public static final String modId = BetterStorage.MODID;
 	
 	public static final String commonProxy = "net.mcft.copy.betterstorage.proxy.CommonProxy";
 	public static final String clientProxy = "net.mcft.copy.betterstorage.proxy.ClientProxy";
